@@ -26,15 +26,17 @@ export default function PriceRange(props: {
   const pct75 = `${scale(percent75)}%`;
   const spread = `${scale(percent75) - scale(percent25)}%`;
 
+  const styleProps = {
+    '--pct25': pct25,
+    '--pct50': pct50,
+    '--pct75': pct75,
+    '--spread': spread,
+  } as React.CSSProperties;
+
   return (
     <div
       className={classes.canvas}
-      style={{
-        '--pct25': pct25,
-        '--pct50': pct50,
-        '--pct75': pct75,
-        '--spread': spread,
-      }}
+      style={styleProps}
     >
       <div className={classes.annoLine}>
         <div className={classes.avg}>
