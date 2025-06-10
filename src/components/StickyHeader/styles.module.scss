@@ -1,0 +1,22 @@
+.header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #DEE9F1;
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+
+    .title {
+      font-weight: bold;
+    }
+  }
+}

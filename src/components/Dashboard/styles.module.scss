@@ -1,0 +1,32 @@
+.dash {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 40px;
+  padding-bottom: 40px;
+
+  aside {
+    h2 {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 0.6em;
+    }
+  }
+
+  .content {
+    .selectors {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 1em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+
+      div:last-child {
+        grid-column: 1 / 3;
+      }
+    }
+  }
+}

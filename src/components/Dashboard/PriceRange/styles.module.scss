@@ -1,0 +1,80 @@
+.canvas {
+  .barBg {
+    margin: 0.6em 0;
+    position: relative;
+    height: 1em;
+    background: #F3F7FA;
+
+    .barSpread {
+      position: absolute;
+      background: #C8F0FF;
+      height: 100%;
+      width: var(--spread);
+      left: var(--pct25);
+    }
+
+    .thumbLow,
+    .thumbHigh,
+    .thumbMid {
+      position: absolute;
+      background: #0A3D62;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.4em;
+      height: 1.4em;
+      border-radius: 50%;
+    }
+
+    .thumbLow {
+      left: var(--pct25);
+    }
+
+    .thumbHigh {
+      left: var(--pct75);
+    }
+
+    .thumbMid {
+      left: var(--pct50);
+    }
+  }
+
+  .annoLine {
+    position: relative;
+    height: 2em;
+
+    .avg,
+    .low,
+    .high {
+      position: absolute;
+      left: 0;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span:first-child {
+        font-weight: bold;
+      }
+
+      span:last-child {
+        font-size: 0.8em;
+      }
+    }
+
+    .avg {
+      bottom: 0;
+      left: var(--pct50);
+    }
+
+    .low {
+      top: 0;
+      left: var(--pct25);
+    }
+
+    .high {
+      top: 0;
+      left: var(--pct75);
+    }
+  }
+}
